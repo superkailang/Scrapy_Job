@@ -1,0 +1,13 @@
+version: '2'
+services:
+  web:
+    build: ./
+    image: pythonspider
+    volumes:
+      - ./app:/app
+    ports:
+      - "81:81"
+    container_name: douban_scrapy_job
+    #command: python main.py
+    tty: true
+    
